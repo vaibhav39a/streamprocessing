@@ -1,0 +1,15 @@
+site_name: streamprocessing.io
+nav:
+    - Home: index.md
+    - Concepts:
+        - concepts/time.md
+        - concepts/watermarks.md
+    - frameworks:
+        - frameworks/kafka.md
+        - frameworks/kafkastreams.md
+        - frameworks/flink.md
+    - tools:
+        - tools/kafkacat.md
+    - About: about.md
+theme:
+    name: material
