@@ -1,3 +1,2 @@
-# Stream processing
-
-Understanding stream processing
+# Overview
+Understand stream processing.
