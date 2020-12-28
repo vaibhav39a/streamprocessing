@@ -8,10 +8,10 @@
     
     
     
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>Home - Stream Processing</title>
+    <title>Flink sql client - Stream Processing</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/cinder.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
 
     
         
@@ -40,7 +40,7 @@
      
 </head>
 
-<body class="homepage" >
+<body>
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -58,7 +58,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href=".">Stream Processing</a>
+            <a class="navbar-brand" href="..">Stream Processing</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -67,8 +67,8 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Home</a>
+                    <li >
+                        <a href="..">Home</a>
                     </li>
                 
                 
@@ -79,7 +79,7 @@
                         
                             
 <li >
-    <a href="frameworks/kafka/">Kafka</a>
+    <a href="../frameworks/kafka/">Kafka</a>
 </li>
 
                         
@@ -94,7 +94,7 @@
                         
                             
 <li >
-    <a href="tools/kafkacat/">Kafkacat</a>
+    <a href="../tools/kafkacat/">Kafkacat</a>
 </li>
 
                         
@@ -104,7 +104,7 @@
                 
                 
                     <li >
-                        <a href="about/">About</a>
+                        <a href="../about/">About</a>
                     </li>
                 
                 
@@ -114,16 +114,6 @@
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                             <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <a rel="prev" >
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="frameworks/kafka/">
-                            Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
             </ul>
@@ -136,16 +126,22 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#overview">Overview</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="overview">Overview</h1>
-<p>Understand stream processing.</p>
-<ul>
-<li><a href="distributed-systems/">Distributed Systems</a></li>
-</ul></div>
+<p>brew install apache-flink</p>
+<p>cd /usr/local/Cellar/apache-flink/1.10.1/libexec</p>
+<p>./bin/start-cluster.sh</p>
+<p>you can see the cluster running at 
+http://localhost:8081/</p>
+<p>Start sql client
+./bin/sql-client.sh embedded</p>
+<p>This uses the configuration defined in 
+./conf/sql-client-defaults.yaml</p>
+<p>SELECT 'Hello World';</p>
+<p>SET execution.result-mode=table;</p>
+<p>SELECT name, COUNT(*) AS cnt FROM (VALUES ('Bob'), ('Alice'), ('Greg'), ('Bob')) AS NameTable(name) GROUP BY name;</p></div>
         
         
     </div>
@@ -161,7 +157,7 @@
         
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
@@ -169,10 +165,10 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
 
-    <script>var base_url = "."</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -243,8 +239,3 @@
     </body>
 
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2020-12-28 03:59:47.062891+00:00
--->
