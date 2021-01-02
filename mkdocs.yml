@@ -8,3 +8,6 @@ nav:
     - About: about.md
 theme:
     name: cinder
+google_analytics:
+  - G-ZRJT8VTJM5
+  - auto
